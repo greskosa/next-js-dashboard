@@ -1,18 +1,18 @@
 import Image from 'next/image';
 
-import {
-  FormattedCustomersTable,
-} from '@/app/lib/definitions';
+import { fetchFilteredCustomers } from '@/app/lib/data';
 import { lusitana } from '@/app/ui/fonts';
 import Search from '@/app/ui/search';
 
 export default async function CustomersTable({
-  customers,
+  query
 }: {
-  customers: FormattedCustomersTable[];
+  query: string
 }) {
+    const customers = await fetchFilteredCustomers(query);
+
   return (
-    <div className="w-full">
+    <>
       <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
         Customers
       </h1>
@@ -118,6 +118,6 @@ export default async function CustomersTable({
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
