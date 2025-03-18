@@ -109,30 +109,30 @@ export function TableRowSkeleton() {
       <td className="relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3">
         <div className="flex items-center gap-3">
           <div className="h-8 w-8 rounded-full bg-gray-100"></div>
-          <div className="h-6 w-24 rounded bg-gray-100"></div>
+          <div className="h-5 w-24 rounded bg-gray-100"></div>
         </div>
       </td>
       {/* Email */}
       <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-32 rounded bg-gray-100"></div>
+        <div className="h-5 w-32 rounded bg-gray-100"></div>
       </td>
       {/* Amount */}
       <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
+        <div className="h-5 w-16 rounded bg-gray-100"></div>
       </td>
       {/* Date */}
       <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
+        <div className="h-5 w-16 rounded bg-gray-100"></div>
       </td>
       {/* Status */}
       <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
+        <div className="h-5 w-16 rounded bg-gray-100"></div>
       </td>
       {/* Actions */}
       <td className="whitespace-nowrap py-3 pl-6 pr-3">
         <div className="flex justify-end gap-3">
-          <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
-          <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
+          <div className="h-[37px] w-[37px] rounded bg-gray-100"></div>
+          <div className="h-[37px] w-[37px] rounded bg-gray-100"></div>
         </div>
       </td>
     </tr>
@@ -182,13 +182,13 @@ export function InvoicesTableSkeleton() {
                 <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
                   Customer
                 </th>
-                <th scope="col" className="px-3 py-5 font-medium">
+                <th scope="col" className="px-1 py-5 font-medium">
                   Email
                 </th>
-                <th scope="col" className="px-3 py-5 font-medium">
+                <th scope="col" className="px-4 py-5 font-medium">
                   Amount
                 </th>
-                <th scope="col" className="px-3 py-5 font-medium">
+                <th scope="col" className="px-1 py-5 font-medium">
                   Date
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
