@@ -1,0 +1,53 @@
+name: Lint and Build Code
+
+on:
+  push:
+    branches:
+      - main  # Or use your default branch name if different
+  pull_request:
+    branches:
+      - main  # Or use your default branch name if different
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.18.0'  # Specify your Node.js version here
+
+    - name: Install pnpm
+      run: npm install -g pnpm  # Install pnpm globally
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Run lint
+      run: pnpm lint
+
+  build:
+    runs-on: ubuntu-latest
+    needs: lint  # Ensure this job runs after the 'lint' job
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.18.0'  # Specify your Node.js version here
+
+    - name: Install pnpm
+      run: npm install -g pnpm  # Install pnpm globally
+
+    - name: Install dependencies
+      run: pnpm install  # Install dependencies again or use cache to speed it up
+
+    - name: Build project
+      run: pnpm build  # Run the build command for your project
